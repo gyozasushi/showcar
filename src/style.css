@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .navbar{
     position: fixed !important;
-    transition: all 0.3s ease-out 0s !important;
-    background-color: #02020228 !important;
+    transition: all 0.5s ease-out 0s !important;
+    background-color: #00000028 !important;
     backdrop-filter: blur(5px) !important;
     padding: 1rem 1rem !important;
-    
 }
 .navbar-toggler {
     position: relative !important;
@@ -15,9 +15,11 @@
     border: none !important;
     outline: none!important;
     box-shadow: none !important;
+    right: 17rem !important;
     
   }
   .navbar-toggler span {
+    
     display: block !important;
     background-color: #ffffff !important;
     height: 4px !important;
@@ -31,7 +33,11 @@
     
     /* border: 2px solid #000 !important; */
   }
+.navbar-toggler span:nth-child(2){
   
+  width: 35px  !important;
+  left: 5px !important;
+}
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
   transition: transform 0.35s ease-in-out !important;
@@ -58,22 +64,22 @@
   transform: rotate(-135deg) !important;
   opacity: 0.9 !important;
 }
+
 .navbar-nav .nav-link {
     color: rgb(255, 255, 255) !important;
     padding-right: 1rem !important;
     padding-left: 1rem !important;
     font-size: 1.2rem;
+    font-weight: 500;
+   
   }
   .navbar-nav .nav-item {
     position: relative; 
     margin-left: 2rem;
   }
   
-  .navbar-nav .nav-item a {
-    font-weight: 400;
-    transition: all 0.3s ease-out 0s;
-    position: relative;
-    z-index: 1;
+  .navbar-nav .nav-item a:hover{
+    color: rgb(167, 167, 167) !important;
   }
 /* media HP  */
 
@@ -82,14 +88,14 @@
   display: none;
 }
 .video-background-container {
-  position: relative;
-  width: 100%;
-  height: 80%; /* Menutupi seluruh layar */
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 80%; /* Menutupi seluruh layar */
+    overflow: hidden;
 }
 
 .video-background {
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   width: 100%;
@@ -104,11 +110,9 @@
 
 .home-section{
   position: relative;
-  padding-top: 4rem !important; 
-  padding-bottom: 4rem !important;
 }
 .home-content {
-  padding: 4rem 0.5rem 2rem !important;
+  padding: 6rem 0.5rem 2rem !important;
   color: rgb(255, 255, 255);
   text-align: left;
 }
@@ -144,7 +148,7 @@
   font-size: 1.2rem;
 }
 .home-desc h1{
-  padding-top: 4rem;
+  padding-top: 2rem;
   font-size: 3rem;
   font-family: "Anton", sans-serif;
 }
@@ -175,7 +179,9 @@
 .home-desc {
   transition: opacity 0.2s ease-in-out;
 }
-
+.home-spek{
+  margin-top: 4rem !important;
+}
 .fade-in {
   opacity: 1;
 }
@@ -183,18 +189,143 @@
 .fade-out {
   opacity: 0;
 }
+.speedologo{
+  border: 2px solid ;
+  padding: 5rem;
+}
+.home-spek {
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
 
+.speedo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.speedo-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.speedo-img {
+  max-width: 80%;
+  height: auto;
+  padding: 20px;
+}
+
+.speedo-text, .speedo-title {
+  font-family: "Tomorrow",sans-serif;
+}
+
+.speedo-title {
+  font-size: 6rem;
+  font-family: "Anton", sans-serif;
+  padding: 20px 25px 10px;
+  margin-top: 20px;
+}
+/* About Section */
+.about-section{
+  position: relative;
+  width: 100%;
+  height: 100%; /* Menutupi seluruh layar */
+  overflow: hidden;
+  padding-top: 3rem ;
+}
+.about-contain{
+  padding: 5rem 1rem 1rem 1rem;
+  
+}
+.about-title{
+  font-size: 3rem;
+  font-family: "Anton",sans-serif;
+  color: #ffffff;
+}
+.logo-image{
+  width: 150px; /* Set your desired width */
+  height: 150px; /* Set your desired height */
+  object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  margin: 10px; /* Center the image */
+}
+
+.about-bg{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: brightness(0.4);
+}
+.logo-about{
+  padding-top: 2rem;
+}
+
+.imgabout{
+  border-radius: 40px;
+  
+}
+.bendera{
+  max-width: 80%;
+  height: 200px;
+  padding: 10px;
+  filter: brightness(0.6);
+  border-radius: 50%;
+}
+
+.section-showroom{
+  padding: 4rem 1rem 1rem;
+  background-color: rgba(236, 236, 236, 0.315);
+}
+.card {
+  border: none;
+  border-radius: 0.5rem;
+}
+.card:hover {
+  box-shadow: 20px 10px 16px rgb(0, 0, 0);
+}
+.card-img-wrapper {
+  height: 200px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+  overflow: hidden;
+}
+
+.card-img {
+  width: 140%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(0.7);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body {
+  flex-grow: 1;
+}
 
 @media (max-width:767px){
+  .navbar-collapse{
+    transition: all 0.4s ease-in-out 0s !important;
+  }
   .navbar-nav .nav-link{
     height: 100px;
+    
   }
   .home-content{
     padding-top: 1rem !important;
   }
   .navbar-nav{
     align-items: center;
-    height: 30rem !important;
+    height: 50rem !important;
     gap: 15px !important;
     padding-top: 6rem !important;
     font-weight: 3em;
@@ -203,7 +334,6 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    
     z-index: 1;
     opacity: 1;
     padding: 0;
@@ -228,5 +358,31 @@
     text-align: center;
     padding-bottom: 4rem;
   }
+  .about-title{
+    font-size: 3.4rem;
+  }
+  .bendera{
+    height: 180px;
+  }
+
+  .card {
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .card:hover {
+    box-shadow: 20px 10px 16px rgb(0, 0, 0);
+  }
+  .card-img-wrapper {
+    width: 100%;
+    height: 300px; /* Sesuaikan tinggi sesuai kebutuhan Anda */
+    overflow: hidden;
+  }
   
+  .card-img {
+    width: 145%;
+    height: 110%;
+    object-fit: cover;
+    transform: scale(0.8);
+    
+  }
 }

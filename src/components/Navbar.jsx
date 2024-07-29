@@ -8,24 +8,13 @@ import { Link } from "react-router-dom";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
-  const [navColour, updateNavbar] = useState(false);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
-    }
-  }
-
-  window.addEventListener("scroll", scrollHandler);
 
   return (
     <Navbar
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
     >
       <Container>
         <Navbar.Brand href="/" className="d-flex" style={{fontSize:"1.4rem",fontWeight:500,color:"#ffff"}}>
